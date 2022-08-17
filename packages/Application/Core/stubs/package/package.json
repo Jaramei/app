@@ -1,0 +1,8 @@
+{
+    "name": "{Package}",
+    "provider": "Application\\{Package}\\Providers\\{Package}ServiceProvider",
+    "Package": "Application\\{Package}\\Package",
+    "author": "Jakub Jablonski",
+    "version": "1.0",
+    "description": "{Package}"
+}

@@ -1,0 +1,19 @@
+<?php
+
+namespace Application\{Package}\Http\Composers;
+
+use Illuminate\View\View;
+
+
+class {Package}Composer  {
+
+    /**
+     * @param View $view
+     */
+
+    public function compose(view $view) {
+
+    }
+
+
+}

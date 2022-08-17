@@ -1,0 +1,51 @@
+a { color:#546E7A;}
+
+.no-paddding {
+
+  padding:0 !important;
+
+}
+
+hr {
+
+    border: 0; height: 1px;
+
+}
+
+.no-margin {
+
+  margin:0 !important;
+
+}
+
+.page-header {
+    top: 0;
+    border-bottom: 1px solid #E0E0E0;
+    background: white;
+    clear: left;
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    -webkit-transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-small {
+
+    min-height:180px !important;
+
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+

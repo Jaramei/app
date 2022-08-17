@@ -1,0 +1,30 @@
+{
+    "name": "application/core",
+    "description": "DbCore Platform",
+    "license": "Commercial",
+    "authors": [
+        {
+            "name": "Jakub Jabłoński",
+            "email": "jakubjablonski@pasadema.pl"
+        }
+    ],
+    "require": {
+        "devfactory/minify": "1.0.*",
+        "jackiedo/log-reader": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\Core\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Application\\Core\\Providers\\CoreServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}

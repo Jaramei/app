@@ -1,0 +1,16 @@
+@extends('core::partials.app')
+
+@section('content')
+
+    @include('{Package}::common.header')
+
+    @include('core::common.messages',['errors'=>$errors])
+
+    {{Form::open(['files' => true])}}
+
+        @include('{Package}::{package}.form',['button'=>trans('{Package}::default.buttons.add')])
+
+    {{Form::close()}}
+
+
+@stop

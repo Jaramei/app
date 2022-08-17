@@ -1,0 +1,11 @@
+<div class="card">
+
+    <div class="card-content">
+
+        <div class="col s8">
+            <h5 class="no-margin"><strong>{{ trans('{Package}::default.name') }}</strong></h5> <h6>{{trans('{Package}::default.description')}}</h6>
+        </div>
+
+    </div>
+
+</div>

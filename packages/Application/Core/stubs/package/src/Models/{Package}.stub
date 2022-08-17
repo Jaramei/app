@@ -1,0 +1,25 @@
+<?php
+
+namespace Application\{Package}\Models;
+
+use Eloquent;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+/**
+ * Application\{Package}\Models\{Package}
+ *
+ * @mixin \Eloquent
+ */
+class {Package} extends Eloquent
+{
+    use SoftDeletes;
+
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = '{Package}';
+
+    protected $fillable = ['name'];
+}

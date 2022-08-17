@@ -1,0 +1,33 @@
+<?php
+
+namespace Application\{Package}\Repositories\Caches;
+
+//use Application\Core\Repositories\Caches\CacheAbstractDecorator;
+//use Application\Core\Services\Cache\CacheInterface;
+use Application\{Package}\Repositories\Interfaces\{Package}Interface;
+
+
+
+class {Package}CacheDecorator extends CacheAbstractDecorator implements {Package}Interface
+{
+    /**
+     * @var {Package}Interface
+     */
+    protected $repository;
+
+    /**
+     * @var CacheInterface
+     */
+    protected $cache;
+
+    /**
+     * {Package}CacheDecorator constructor.
+     * @param {Package}Interface $repository
+     * @param CacheInterface $cache
+     */
+    public function __construct({Package}Interface $repository, CacheInterface $cache)
+    {
+        $this->repository = $repository;
+        $this->cache = $cache;
+    }
+}

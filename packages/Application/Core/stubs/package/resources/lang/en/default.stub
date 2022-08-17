@@ -1,0 +1,16 @@
+<?php
+
+return [
+    'name' => '{Package}',
+    'description' => 'A new {Package}',
+    'buttons'=>[
+                  'add'=>'add',
+                  'edit'=>'edit',
+                  'delete'=>'delete'
+                  ],
+     'titles'=>[
+                   'add'=>'Add new offer',
+                   'edit'=>'Edit offer'
+     ]
+
+];

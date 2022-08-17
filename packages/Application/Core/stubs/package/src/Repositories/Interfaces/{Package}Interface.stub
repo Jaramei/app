@@ -1,0 +1,9 @@
+<?php
+
+namespace Application\{Package}\Repositories\Interfaces;
+
+use Application\Core\Repositories\RepositoryInterface;
+
+interface {Package}Interface extends RepositoryInterface
+{
+}

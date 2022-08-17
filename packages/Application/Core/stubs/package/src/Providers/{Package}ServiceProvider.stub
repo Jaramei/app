@@ -1,0 +1,56 @@
+<?php
+
+namespace Application\{Package}\Providers;
+
+use Application\{Package}\Models\{Package};
+use Illuminate\Support\ServiceProvider;
+use Application\{Package}\Repositories\Caches\{Package}CacheDecorator;
+use Application\{Package}\Repositories\Eloquent\{Package}Repository;
+use Application\{Package}\Repositories\Interfaces\{Package}Interface;
+use Application\Core\Supports\Helper;
+
+class {Package}ServiceProvider extends ServiceProvider
+{
+
+
+    public function register()
+    {
+        if (config('enable_cache', false)) {
+            $this->app->singleton({Package}Interface::class, function () {
+                return new {Package}CacheDecorator(new {Package}Repository(new {Package}()), new Cache($this->app['cache'], {Package}Repository::class));
+            });
+        } else {
+            $this->app->singleton({Package}Interface::class, function () {
+                return new {Package}Repository(new {Package}());
+            });
+        }
+
+        Helper::autoload(__DIR__ . '/../../helpers');
+
+          $this->app->register('\Application\{Package}\Providers\ComposersServiceProvider');
+
+    }
+
+
+    public function boot()
+    {
+
+         $this->app->router->group(['namespace'=>'Application\{Package}\Http\Controllers'], function() {
+
+                    $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
+
+          });
+
+        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', '{Package}');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/{package}.php', '{Package}');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', '{Package}');
+
+        if (app()->runningInConsole()) {
+            $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+
+            $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views/vendor/{Package}')], 'views');
+            $this->publishes([__DIR__ . '/../../resources/lang' => resource_path('lang/vendor/{Package}')], 'lang');
+            $this->publishes([__DIR__ . '/../../config/{Package}.php' => config_path('{Package}.php')], 'config');
+        }
+    }
+}

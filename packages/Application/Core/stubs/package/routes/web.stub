@@ -1,0 +1,14 @@
+<?php
+
+Route::group(['prefix'=>'application','middleware' => ['web','auth','language']], function () {
+
+    Route::group(['prefix'=>'{package}'], function() {
+
+    Route::get('/', [
+                'as' => '{package}.index',
+                'uses' => '{Package}Controller@index',
+            ]);
+
+    });
+
+ });

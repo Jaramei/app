@@ -1,0 +1,8 @@
+{
+    "name": "Offers",
+    "provider": "Application\\Offers\\Providers\\OffersServiceProvider",
+    "Package": "Application\\Offers\\Package",
+    "author": "Jakub Jablonski",
+    "version": "1.0",
+    "description": "Offers"
+}
